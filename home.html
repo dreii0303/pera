@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERA - Dashboard</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+
+<div class="dashboard">
+    <div class="sidebar">
+        <div class="logo">
+            <h2>💰 PERA</h2>
+            <p>Expense Assistant</p>
+        </div>
+        <nav class="menu">
+            <a class="menu-item active" href="home.html">🏠 Home</a> 
+            <a class="menu-item" href="financial-summary.html">📊 Financial Summary</a>
+            <a class="menu-item" href="expense-recording.html">💸 Expense Recording</a>
+            <a class="menu-item" href="income-management.html">💰 Income Management</a>
+            <a class="menu-item" href="bank-management.html">🏦 Bank Management</a>
+            <a class="menu-item" href="recurring-payments.html">🔁 Recurring Payments</a>
+        </nav>
+        <div class="logout">
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="topbar">
+            <h1>Dashboard</h1>
+            <p>Welcome back! Here is your financial overview.</p>
+        </div>
+
+        <div class="cards">
+            <div class="card card-balance">
+                <h3>💰 Total Balance</h3>
+                <p class="amount" id="dashTotalBalance">₱0.00</p>
+            </div>
+
+            <div class="card card-income">
+                <h3>📈 Total Income</h3>
+                <p class="amount" id="dashTotalIncome">₱0.00</p>
+            </div>
+
+            <div class="card card-expense">
+                <h3>💸 Total Expenses</h3>
+                <p class="amount" id="dashTotalExpense">₱0.00</p>
+            </div>
+
+            <div class="card card-recurring">
+                <h3>🔁 Active Subscriptions</h3>
+                <p class="amount" id="dashRecurringCount">0</p>
+            </div>
+        </div>
+
+        <div class="recent">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2>Recent Transactions</h2>
+                <a href="financial-summary.html" style="color: #4db8ff; text-decoration: none; font-size: 0.9rem;">View All →</a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="dashTransactionTable">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="web.js"></script>
+</body>
+</html>
