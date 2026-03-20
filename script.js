@@ -8,6 +8,6 @@ function submitForm() {
 }
 
 function showAlert() {
-    alert("Welcome to PERA! Redirecting you to login...");
-    window.location.href = "login.html"; 
+    alert("Welcome to PERA! Redirecting you to your Dashboard...");
+    window.location.href = "home.html"; 
 }
